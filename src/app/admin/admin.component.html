@@ -1,0 +1,10 @@
+<h3>ADMIN</h3>
+
+  <a routerLink="./" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+  <a routerLink="categories" routerLinkActive="active">Categories</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+
+<div style="background: #f2f2f2; height: 100px">
+  <router-outlet></router-outlet>
+</div>
