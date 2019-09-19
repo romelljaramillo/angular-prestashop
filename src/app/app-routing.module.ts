@@ -8,13 +8,21 @@ import { LoginComponent } from './admin/auth/login/login.component';
 const approutes: Routes = [
   {
     path: 'admin',
-    // loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
-    loadChildren: './admin/admin.module#AdminModule',
+    loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
     canLoad: [AuthGuard]
   },
-  { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: '**', component: PageNotFoundComponent }
+  { 
+    path: 'login', 
+    component: LoginComponent 
+  },
+  { 
+    path: '', 
+    redirectTo: '', 
+    pathMatch: 'full' },
+  { 
+    path: '**', 
+    component: PageNotFoundComponent 
+  }
 ];
 
 @NgModule({
